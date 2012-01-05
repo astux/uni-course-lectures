@@ -1,0 +1,19 @@
+- content_for :title do 
+  %h1= @academic_period.name
+  
+= render :partial => 'admin/academic_periods/menu', :locals => { :academic_period => @academic_period }
+
+%article.content
+  %header.page-header
+    %h2
+      = "#{@academic_period_curriculum.code}:"
+      = @academic_period_curriculum_student.name
+    %ul#toolbar
+      %li= link_to (t 'Back'), admin_academic_period_curriculum_path(@academic_period, @academic_period_curriculum), :class => 'back'
+      %li= button_to (t 'Delete'), {:action => 'show'}, :confirm => (t 'AreYouSure'), :method => :delete, :class => 'delete'
+      
+  %p
+    %strong= (t 'activerecord.attributes.student.code' ) + ': '
+    = @academic_period_curriculum_student.student.code
+
+  = render :partial => 'admin/people/show', :locals => {:person => @academic_period_curriculum_student.student.person}

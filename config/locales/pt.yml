@@ -1,0 +1,21 @@
+# encoding: utf-8
+pt:
+  activerecord:
+    models:
+      academic_period_curriculum: &academic_period_curriculum "Turma de Curso"
+    attributes:
+      academic_period_curriculum:
+        code: "Código"
+        curriculum_id: "Curso"
+    errors:
+      models:
+        academic_period_curriculum:
+          unknown: "Não foi possível criar esta turma de curso. Por favor, tente novamente."
+          professor_ids: "Por favor, selecione pelo menos um professor."
+        academic_period_curriculum_student:
+          unknown: "Não foi possível adicionar estes alunos na turma de curso. Por favor, tente novamente."
+
+  AcademicPeriodCurriculums: &academic_period_curriculums "Turmas de Curso"
+
+  url:
+    academic_periods_curriculums: *academic_period_curriculums

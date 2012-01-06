@@ -6,4 +6,9 @@ class AcademicPeriodCurriculum < ActiveRecord::Base
   
   validates :curriculum_id, :presence => true
   validates :academic_period_id, :presence => true
+  validates_uniqueness_of :code, :scope => :academic_period_id
+  
+  def name
+    code
+  end
 end

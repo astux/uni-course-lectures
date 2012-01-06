@@ -3,6 +3,7 @@ pt:
   activerecord:
     models:
       academic_period_curriculum: &academic_period_curriculum "Turma de Curso"
+      academic_period_curriculum_student: "Aluno"
     attributes:
       academic_period_curriculum:
         code: "Código"
@@ -18,4 +19,12 @@ pt:
   AcademicPeriodCurriculums: &academic_period_curriculums "Turmas de Curso"
 
   url:
-    academic_periods_curriculums: *academic_period_curriculums
+    academic_period_curriculums: *academic_period_curriculums
+    academic_period_curriculum_students : "Alunos"
+    
+  flash:
+    academic_period_curriculum_students:
+      create:
+        notice: 'Aluno(s) adicionado(s) na turma de curso com sucesso.'
+      destroy:
+        notice: 'Aluno removido da turma com sucesso.'

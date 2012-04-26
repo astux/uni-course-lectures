@@ -1,0 +1,30 @@
+# encoding: utf-8
+en:
+  activerecord:
+    models:
+      academic_period_curriculum: &academic_period_curriculum "Course Lecture"
+      academic_period_curriculum_student: "Student"
+    attributes:
+      academic_period_curriculum:
+        code: "Code"
+        curriculum_id: "Course"
+    errors:
+      models:
+        academic_period_curriculum:
+          unknown: "It was not possible to create a course lecture. Please, try again."
+          professor_ids: "Please, select at least one professor."
+        academic_period_curriculum_student:
+          unknown: "It was not possible to add this student to the course lecture. Please, try again."
+
+  AcademicPeriodCurriculums: &academic_period_curriculums "Course Lecture"
+
+  url:
+    academic_period_curriculums: *academic_period_curriculums
+    academic_period_curriculum_students : "Students"
+    
+  flash:
+    academic_period_curriculum_students:
+      create:
+        notice: 'Student(s) added to the course lecture.'
+      destroy:
+        notice: 'Student removed from the course lecture.'

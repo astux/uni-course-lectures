@@ -1,0 +1,13 @@
+=== UniCourseLectures
+
+Plugin para a Uni que facilita a matrícula de estudantes.
+
+=== Instalação
+
+1. Adicione ao Gemfile
+
+gem 'uni_course_lectures', :git => 'git@github.com:astux/uni-course-lectures.git'
+
+Pronto. :)
+
+Copyright (c) 2012 Astux, released under the MIT license

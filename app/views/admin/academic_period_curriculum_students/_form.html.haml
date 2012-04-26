@@ -1,0 +1,14 @@
+= form_tag({:action => 'create'}) do
+  
+  .clearfix
+    = label_tag :student_ids, (t 'Students'), :class => :required
+    .input
+      = select_tag :student_ids, nil, :multiple => true
+      
+  .actions
+    = submit_tag "#{t 'Add'} #{t 'Students'}", :class => 'btn primary'
+      
+:javascript
+  $(document).ready(function() {
+    Application.autocomplete('student_ids', "#{admin_students_path}.js", "#{t 'Remove'}", true)
+  });
